@@ -5,9 +5,8 @@ const NavBar = () => {
   return (
     <nav className='app-navbar'>
         <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/aboutus">Sobre nós</Link></li>
-            <li><Link to="/donation">Faça uma Doação</Link></li>
+            <li><Link to="/aboutus" className='underline'>Quem Somos</Link></li>
+            <li><Link to="/donation" className='underline'>Faça uma Doação</Link></li>
         </ul>
     </nav>
   )

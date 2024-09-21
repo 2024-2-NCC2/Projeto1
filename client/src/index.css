@@ -1,88 +1,88 @@
 :root {
-    --background-primary-color: #F08080; 
-    --title-text-color: #050505;
-    --text-color: #070707;
-    --link-hover-color: #972348;
-    --underline-color: #ce5176;
-  }
+  --background-primary-color: #F08080; 
+  --title-text-color: #050505;
+  --text-color: #070707;
+  --link-hover-color: #972348;
+  --underline-color: #ce5176;
+}
   
-  * {
-    margin: 0;
-    padding: 0;
-    font-family: "Itim", cursive;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Itim", cursive;
+}
   
-  .app-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: var(--background-primary-color);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
+.app-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: var(--background-primary-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
   
-  .foodpath-logo a {
-    text-decoration: none;
-    color: inherit;
-  }
+.foodpath-logo a {
+  text-decoration: none;
+  color: inherit;
+}
   
-  .foodpath-logo h1 {
-    margin: 0;
-    font-size: 1.8rem;
-    font-family: "Itim", cursive;
-    cursor: pointer;
-    transition: color 0.3s ease;
-  }
+.foodpath-logo h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-family: "Itim", cursive;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
   
-  .foodpath-logo h1:hover,
-  .foodpath-logo a:hover {
-    color: #202020;
-  }
+.foodpath-logo h1:hover,
+.foodpath-logo a:hover {
+  color: #202020;
+}
   
-  .app-navbar ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-  }
+.app-navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
   
-  .app-navbar ul li {
-    padding: 10px;
-  }
+.app-navbar ul li {
+  padding: 10px;
+}
   
-  .app-navbar ul li a {
-    color: #000000;
-    font-size: 1.4rem;
-    font-family: "Itim", cursive;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
+.app-navbar ul li a {
+  color: #000000;
+  font-size: 1.4rem;
+  font-family: "Itim", cursive;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
 
-  .app-navbar ul li a:hover {
-    color: var(--link-hover-color);
-  }
+.app-navbar ul li a:hover {
+  color: var(--link-hover-color);
+}
   
-  .underline {
-    position: relative;
-    display: inline;
-    text-decoration: none;
-    font-size: 20px;
+.underline {
+  position: relative;
+  display: inline;
+  text-decoration: none;
+  font-size: 20px;
 }
 
 .underline::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: var(--underline-color);
-    transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--underline-color);
+  transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 @media (hover: hover) and (pointer: fine) {
-    .underline:hover::before {
-        width: 100%;
-    }
+  .underline:hover::before {
+    width: 100%;
+  }
 }
 
 footer {
@@ -96,21 +96,21 @@ footer {
 
 
 .footer-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .footer-header {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .footer-header h1 {
-    font-size: 2rem;
-    margin: 10px 0;
-    color: var(--link-color);
+  font-size: 2rem;
+  margin: 10px 0;
+  color: var(--link-color);
 }
 
 .footer-header p {
@@ -118,50 +118,50 @@ footer {
 }
 
 .footer-content {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  flex-wrap: wrap;
 }
 
 .footer-section {
-    flex: 1;
-    padding: 20px;
-    min-width: 250px;
+  flex: 1;
+  padding: 20px;
+  min-width: 250px;
 }
 
 .footer-section h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: var(--link-color);
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: var(--link-color);
 }
 
 .footer-section p {
-    font-size: 16px;
-    color: var(--link-color);
+  font-size: 16px;
+  color: var(--link-color);
 }
 
 .footer-section a {
-    color: var(--link-color);
-    text-decoration: underline;
-    font-weight: bold;
-    text-decoration: none;
-    transition: color 0.3s ease;
+  color: var(--link-color);
+  text-decoration: underline;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .footer-section a:hover {
-    color: var(--link-hover-color);
+  color: var(--link-hover-color);
 }
 
 @media (max-width: 768px) {
-    .footer-content {
-        flex-direction: column;
-        text-align: center;
-    }
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
     
-    .footer-section {
-        padding: 10px 0;
-    }
+  .footer-section {
+    padding: 10px 0;
+  }
 }
 
 @media(max-width: 768px) {

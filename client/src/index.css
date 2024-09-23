@@ -1,9 +1,8 @@
 :root {
-  --background-primary-color: #F08080; 
-  --title-text-color: #050505;
-  --text-color: #070707;
-  --link-hover-color: #972348;
-  --underline-color: #ce5176;
+  --background-primary-color: #111111; 
+  --text-color: #fcfcfc;
+  --link-hover-color: #ee608a;
+  --underline-color: #b8496a;
 }
   
 * {
@@ -29,6 +28,7 @@
 .foodpath-logo h1 {
   margin: 0;
   font-size: 1.8rem;
+  color: var(--text-color);
   font-family: "Itim", cursive;
   cursor: pointer;
   transition: color 0.3s ease;
@@ -36,7 +36,7 @@
   
 .foodpath-logo h1:hover,
 .foodpath-logo a:hover {
-  color: #202020;
+  color: var(--link-hover-color);
 }
   
 .app-navbar ul {
@@ -50,7 +50,7 @@
 }
   
 .app-navbar ul li a {
-  color: #000000;
+  color: var(--text-color);
   font-size: 1.4rem;
   font-family: "Itim", cursive;
   text-decoration: none;
@@ -63,7 +63,10 @@
   
 .underline {
   position: relative;
-  display: inline;
+  display: inline-block;
+  flex-direction: column;
+  align-items: center;
+  color: white;
   text-decoration: none;
   font-size: 20px;
 }
@@ -72,16 +75,18 @@
   content: '';
   position: absolute;
   bottom: 0;
-  left: 0;
+  right: 0;
   width: 0;
   height: 2px;
-  background-color: var(--underline-color);
+  background-color: #f761ac;
   transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 @media (hover: hover) and (pointer: fine) {
   .underline:hover::before {
-    width: 100%;
+      left: 0;
+      right: auto;
+      width: 100%;
   }
 }
 

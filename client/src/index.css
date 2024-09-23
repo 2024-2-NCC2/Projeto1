@@ -28,7 +28,7 @@
 .foodpath-logo h1 {
   margin: 0;
   font-size: 1.8rem;
-  color: var(--text-color);
+  color: var(--link-hover-color);
   font-family: "Itim", cursive;
   cursor: pointer;
   transition: color 0.3s ease;
@@ -36,7 +36,7 @@
   
 .foodpath-logo h1:hover,
 .foodpath-logo a:hover {
-  color: var(--link-hover-color);
+  color: var(--underline-color);
 }
   
 .app-navbar ul {
@@ -59,6 +59,10 @@
 
 .app-navbar ul li a:hover {
   color: var(--link-hover-color);
+  text-shadow: 
+    0 0 5rem var(--link-hover-color), 
+    0 0 6px var(--link-hover-color), 
+    0 0 8px var(--link-hover-color);
 }
   
 .underline {
@@ -99,7 +103,6 @@ footer {
   width: 100%;
 }
 
-
 .footer-container {
   display: flex;
   flex-direction: column;
@@ -115,7 +118,7 @@ footer {
 .footer-header h1 {
   font-size: 2rem;
   margin: 10px 0;
-  color: var(--link-color);
+  color: var(--link-hover-color);
 }
 
 .footer-header p {
@@ -136,13 +139,13 @@ footer {
 }
 
 .footer-section h2 {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   margin-bottom: 10px;
-  color: var(--link-color);
+  color: var(--link-hover-color);
 }
 
 .footer-section p {
-  font-size: 16px;
+  font-size: 20px;
   color: var(--link-color);
 }
 
@@ -156,6 +159,10 @@ footer {
 
 .footer-section a:hover {
   color: var(--link-hover-color);
+  text-shadow: 
+    0 0 5rem var(--link-hover-color), 
+    0 0 10px var(--link-hover-color), 
+    0 0 6px var(--link-hover-color);
 }
 
 @media (max-width: 768px) {

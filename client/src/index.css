@@ -189,3 +189,8 @@ footer {
     align-items: flex-start;
   }
 }
+
+.carousel-item img {
+  height: 700px; /* Defina a altura que achar melhor */
+  object-fit: cover; /* Isso garante que a imagem seja redimensionada sem distorções */
+}

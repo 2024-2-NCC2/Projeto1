@@ -1,5 +1,5 @@
 :root {
-  --background-primary-color: #111111; 
+  --background-primary-color: #202020; 
   --text-color: #fcfcfc;
   --link-hover-color: #ee608a;
   --underline-color: #b8496a;
@@ -65,11 +65,24 @@
     0 0 8px var(--link-hover-color);
 }
   
+.nav-link {
+  color: var(--text-color);
+  font-size: 1.4rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--link-hover-color);
+  text-shadow: 
+    0 0 5rem var(--link-hover-color), 
+    0 0 6px var(--link-hover-color), 
+    0 0 8px var(--link-hover-color);
+}
+
 .underline {
   position: relative;
   display: inline-block;
-  flex-direction: column;
-  align-items: center;
   color: white;
   text-decoration: none;
   font-size: 20px;
@@ -82,8 +95,14 @@
   right: 0;
   width: 0;
   height: 2px;
-  background-color: #f761ac;
+  background-color: var(--underline-color);
   transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.underline:hover::before {
+  left: 0;
+  right: auto;
+  width: 100%;
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -191,6 +210,6 @@ footer {
 }
 
 .carousel-item img {
-  height: 700px; /* Defina a altura que achar melhor */
-  object-fit: cover; /* Isso garante que a imagem seja redimensionada sem distorções */
+  height: 700px;
+  object-fit: cover;
 }

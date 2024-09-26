@@ -29,7 +29,7 @@ const Footer = () => {
             <h2 id="contato">Contato</h2>
             <p>
               Tem dúvidas ou sugestões? <br/> Entre em contato conosco: <br/>
-              <a href="mailto:foodpath@gmail.com" className="underline"> foodpath@gmail.com</a>
+              <a href="mailto:foodpath@gmail.com" className="underline"> foodpathcontact@gmail.com</a>
             </p>
           </div>
         </div>

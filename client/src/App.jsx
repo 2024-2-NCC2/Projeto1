@@ -1,5 +1,5 @@
 import Header from './components/Header';
-import Fotter from './components/Fotter';
+import Fotter from './components/Footer';
 
 import { Outlet } from 'react-router-dom'
 

@@ -2,7 +2,9 @@
   --background-primary-color: #202020; 
   --text-color: #fcfcfc;
   --link-hover-color: #ee608a;
+  --link-color: #ffa7c1;
   --underline-color: #b8496a;
+  --scrollbar-color: #ee608a;
 }
   
 * {
@@ -17,7 +19,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #ee608a;
+  background-color: var(--scrollbar-color);
   border-radius: 10px;
   border: 3px solid #202020;
 }
@@ -34,7 +36,7 @@
   background-color: var(--background-primary-color);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-  
+
 .foodpath-logo a {
   text-decoration: none;
   color: inherit;
@@ -131,7 +133,6 @@
 footer {
   background-color: var(--background-primary-color);
   color: var(--text-color);
-  text-align: center;
   padding: 20px 0;
   height: auto;
   width: 100%;
@@ -139,59 +140,33 @@ footer {
 
 .footer-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 20px;
 }
 
-.footer-header {
-  margin-bottom: 20px;
+.footer-container p {
+  margin: 0;
+  font-size: 20px;
 }
 
-.footer-header h1 {
-  font-size: 2rem;
-  margin: 10px 0;
-  color: var(--link-hover-color);
+.footer-left b{
+  color: rgb(174, 255, 171);
 }
-
-.footer-header p {
-  font-size: 1.4rem;
-}
-
 .footer-content {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 100%;
-  flex-wrap: wrap;
 }
 
-.footer-section {
-  flex: 1;
-  padding: 20px;
-  min-width: 250px;
-}
-
-.footer-section h2 {
-  font-size: 1.8rem;
-  margin-bottom: 10px;
-  color: var(--link-hover-color);
-}
-
-.footer-section p {
-  font-size: 20px;
+.footer-right a {
   color: var(--link-color);
-}
-
-.footer-section a {
-  color: var(--link-color);
-  text-decoration: underline;
-  font-weight: bold;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-.footer-section a:hover {
+.footer-right a:hover {
   color: var(--link-hover-color);
   text-shadow: 
     0 0 5rem var(--link-hover-color), 
@@ -199,14 +174,25 @@ footer {
     0 0 6px var(--link-hover-color);
 }
 
+#doacoes,
+#contato,
+#foodpath {
+  color: var(--link-hover-color);
+}
+
 @media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
   .footer-content {
     flex-direction: column;
     text-align: center;
   }
-    
-  .footer-section {
-    padding: 10px 0;
+
+  .footer-section, .footer-header {
+    text-align: center;
   }
 }
 

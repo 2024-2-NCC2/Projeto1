@@ -34,7 +34,6 @@ const Home = () => {
       </section>
       
       <section className="stats-section">
-        <h2 className="stats-title">Dados referentes à fome no Brasil</h2>
         <div className="stats-wrapper">
           <div className="stats-grid">
             <div className="stat-item">

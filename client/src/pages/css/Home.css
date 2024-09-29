@@ -53,13 +53,6 @@
   border-radius: 12px;
 }
 
-.stats-title {
-  font-size: 3rem;
-  color: var(--underline-color);
-  margin-bottom: 30px;
-  font-weight: 700;
-}
-
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

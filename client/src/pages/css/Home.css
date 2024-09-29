@@ -26,29 +26,29 @@
   object-fit: cover;
 }
 
-.text-description {
-  font-size: 1.5rem;
-  line-height: 1.6;
-}
-
 .text-title {
-  color: var(--underline-color);
+  color: var(--link-hover-color);
   margin-top: 20px;
   font-size: 3rem;
   margin-bottom: 10px;
 }
 
+.text-description {
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+
 .stats-section {
-  padding: 40px;
+  padding: 0;
   border-radius: 8px;
   text-align: center;
   margin-top: 40px;
-  max-width: 90rem;
+  max-width: 100%;
   margin: 0 auto;
 }
 
 .stats-wrapper {
-  background-color: #ffd3e069;
+  background-color: #ffdbe5;
   padding: 30px;
   border-radius: 12px;
 }
@@ -61,37 +61,36 @@
 }
 
 .stat-item {
-  background-color: #ffebf169;
-  padding: 20px;
+  padding: 10px;
   border-radius: 10px;
   text-align: center;
-  transition: background-color 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, color 0.3s ease-in-out; 
+  background-color: #ffd3e080;
+  box-shadow: -3px -3px 10px rgba(238, 96, 138, 0.5), -10px 10px 15px rgba(253, 132, 168, 0.7);
+  color: var(--link-hover-color);
 }
 
 .stat-item:hover {
-  background-color: #fcdae4;
+  transform: translate(5px, -5px);
+  box-shadow: -10px -10px 15px rgba(255, 167, 193, 0.8), -15px 15px 25px rgba(238, 96, 138, 0.7);
+  color: #c24d70;
 }
 
 .stat-number {
   font-size: 3rem;
   font-weight: 700;
-  color: #ff4d4f;
   margin-bottom: 10px;
   display: block;
-  transition: color 0.3s ease-in-out;
-}
-
-.stat-number:hover {
-  color: var(--link-hover-color);
+  transition: color 0.6ms ease-in-out;
 }
 
 .stat-description {
-  font-size: 1.3rem;
+  font-size: 1.7rem;
   color: #333;
 }
 
 .stats-footer {
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   color: #777;
   margin-top: 20px;
 }

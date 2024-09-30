@@ -1,10 +1,13 @@
 :root {
   --background-primary-color: #202020; 
-  --text-color: #fcfcfc;
+  --text-color: #0e0e0e;
   --link-hover-color: #ee608a;
   --link-color: #ffa7c1;
   --underline-color: #b8496a;
   --scrollbar-color: #ee608a;
+  --button-background: #ee608a;
+  --button-hover-background: #ffa7c1;
+  --button-text-color: #fff;
 }
 
 .content-section {
@@ -34,8 +37,65 @@
 }
 
 .text-description {
+  color: var(--text-color);
   font-size: 1.5rem;
   line-height: 1.6;
+}
+
+.mission-section {
+  padding: 40px;
+  text-align: center;
+  color: var(--text-color);
+  margin: 20px 0;
+}
+
+.mission-title {
+  color: var(--link-hover-color);
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.mission-description {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  max-width: 85%;
+  margin: 0 auto;
+}
+
+.call-to-action-section {
+  padding: 10px;
+  text-align: center;
+  color: var(--text-color);
+  margin: 10px 0;
+}
+
+.cta-title {
+  color: var(--link-hover-color);
+  font-size: 4rem;
+  margin-bottom: 5px;
+}
+
+.cta-description {
+  font-size: 1.4rem;
+  color: #ee608a;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 20px;
+}
+
+.cta-button {
+  background-color: var(--button-background);
+  color: var(--button-text-color);
+  padding: 20px 40px;
+  border: none;
+  border-radius: 8px;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: var(--button-hover-background);
 }
 
 .stats-section {
@@ -76,17 +136,6 @@
   color: #c24d70;
 }
 
-@keyframes countUpAnimation {
-  from {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
 .stat-number {
   font-size: 3rem;
   font-weight: 700;
@@ -107,6 +156,17 @@
   margin-top: 20px;
 }
 
+@keyframes countUpAnimation {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 @media (max-width: 768px) {
   .content-section {
       flex-direction: column;
@@ -124,5 +184,15 @@
 
   .stats-grid {
       grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .mission-title, .cta-title {
+    font-size: 2rem;
+  }
+
+  .mission-description, .cta-description {
+    font-size: 1.2rem;
   }
 }

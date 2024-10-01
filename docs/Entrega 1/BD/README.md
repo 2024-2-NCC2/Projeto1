@@ -16,7 +16,7 @@ Cada interação que ocorre no **FoodPath** é registrada no banco de dados, e e
 
 ## 📊 Entidades e seus Atributos
 
-![DER do FoodPath](./images/DER-FoodPath-img.jpeg)
+![DER do FoodPath](../../../images/DER-FoodPath-img.jpeg)
 
 - **User (ID_User\*, Name, Email, Password)**  
 - **ONG (ID_Ong\*, Name, Description, URL, Region)**  

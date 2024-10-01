@@ -1,0 +1,197 @@
+:root {
+  --background-secondary-color: #fff;
+  --background-primary-color: #000000;
+  --text-color: #000000;
+  --link-hover-color: #ee608a;
+  --link-color: #ffa7c1;
+  --underline-color: #b8496a;
+  --scrollbar-color: #ee608a;
+  --button-background: #ee608a;
+  --button-hover-background: #ffa7c1;
+  --button-text-color: #fff;
+}
+
+body {
+  font-family: 'Itim', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-secondary-color);
+  color: var(--text-color);
+}
+
+.image-content img {
+  margin-top: 50px;
+  max-width: 700px;
+  height: auto;
+  object-fit: cover;
+}
+
+.navbar {
+  background-color: var(--background-primary-color);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .navbar-brand img {  
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.navbar .navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar .navbar-links a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar .navbar-links a:hover {
+  color: var(--link-hover-color);
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.carousel-slide.active {
+  display: block;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+.carousel-control.prev {
+  left: 10px;
+}
+
+.carousel-control.next {
+  right: 10px;
+}
+
+.content-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.text-title {
+  color: var(--link-hover-color);
+  margin-top: 20px;
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.text-description {
+  color: var(--text-color);
+  font-size: 1.5rem;
+}
+
+.mission-section {
+  padding: 40px;
+  text-align: center;
+  color: var(--text-color);
+  margin: 20px 0;
+}
+
+.mission-title {
+  color: var(--link-hover-color);
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.mission-description {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  max-width: 85%;
+  margin: 0 auto;
+}
+
+.stats-wrapper {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 2rem;
+  color: var(--link-hover-color);
+}
+
+.cta-button {
+  display: block;
+  margin: 30px auto;
+  background-color: var(--button-background);
+  color: var(--button-text-color);
+  padding: 20px 40px;
+  border: none;
+  border-radius: 8px;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: var(--button-hover-background);
+  transform: scale(1.1);
+  box-shadow: 0 15px 25px rgba(238, 96, 138, 0.7);
+}
+
+.cta-button:active {
+  transform: scale(0.9);
+}
+
+.footer {
+  background-color: var(--background-primary-color);
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-left, .footer-right {
+  flex: 1;
+}
+
+.footer-left h1, .footer-right h2 {
+  color: var(--link-hover-color);
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}

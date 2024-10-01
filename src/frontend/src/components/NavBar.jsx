@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import iconFoodPath from '../public/assets/images/icon-foodpath.png';
 
 const NavBar = () => {
   return (
     <nav className="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">
-          <img alt="Logo" width="30" height="24" className="d-inline-block align-text-top" />
+          <img src={iconFoodPath} alt="Logo" width="50" height="50" className="d-inline-block align-text-top" />
           FoodPath
         </Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

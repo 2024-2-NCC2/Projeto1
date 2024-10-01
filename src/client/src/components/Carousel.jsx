@@ -1,6 +1,6 @@
 import React from 'react';
-import carouselWelcomeImg from '../assets/images/home-carousel.png';
-import carouselContactImg from '../assets/images/contact-carousel.png';
+import carouselWelcome from '../assets/gifs/welcome-to-foodpath-carousel.gif';
+import carouselContact from '../assets/gifs/contact-us-foodpath-carousel.gif';
 
 const Carousel = () => {
   return (
@@ -12,10 +12,10 @@ const Carousel = () => {
         </div>
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img src={carouselWelcomeImg} className="d-block w-100" alt="welcome-image" />
+            <img src={carouselWelcome} className="d-block w-100" alt="welcome-image" />
           </div>
           <div className="carousel-item">
-            <img src={carouselContactImg} className="d-block w-100" alt="contact-image" />
+            <img src={carouselContact} className="d-block w-100" alt="contact-image" />
           </div>
         </div>
         <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">

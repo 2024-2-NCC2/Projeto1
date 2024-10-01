@@ -1,6 +1,6 @@
 import React from 'react';
 import Carousel from '../components/Carousel';
-import '../pages/css/Home.css';
+import './css/Home.css';
 import useCountUp from '../components/hooks/useCountUp';
 
 const Home = () => {

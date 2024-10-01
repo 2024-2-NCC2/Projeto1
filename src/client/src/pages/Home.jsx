@@ -2,6 +2,7 @@ import React from 'react';
 import Carousel from '../components/Carousel';
 import './css/Home.css';
 import useCountUp from '../components/hooks/useCountUp';
+import StatItem from '../components/StatItem';
 
 const Home = () => {
   const peopleWithoutFood = useCountUp(21100000, 3000);
@@ -36,30 +37,30 @@ const Home = () => {
       <section className="stats-section">
         <div className="stats-wrapper">
           <div className="stats-grid">
-            <div className="stat-item">
-              <span className="stat-number">{peopleWithoutFood.toLocaleString()}</span>
-              <p className="stat-description">pessoas que não têm o que comer todos os dias</p>
-            </div>
-            <div className="stat-item">
-              <span className="stat-number">{peopleFoodInsecurity.toLocaleString()}</span>
-              <p className="stat-description">possuem insegurança alimentar</p>
-            </div>
-            <div className="stat-item">
-              <span className="stat-number">{populationSevereHunger},{populationSevereHungerSecondDecimal}%</span>
-              <p className="stat-description">da população estão em situação grave</p>
-            </div>
-            <div className="stat-item">
-              <span className="stat-number">{populationModerateOrSevereHunger},{populationModerateOrSevereHungerSecondDecimal}%</span>
-              <p className="stat-description">da população estão em situação moderada ou grave</p>
-            </div>
-            <div className="stat-item">
-              <span className="stat-number">{foodWasteTons.toLocaleString()}</span>
-              <p className="stat-description">toneladas de alimentos são desperdiçadas por ano no Brasil</p>
-            </div>
-            <div className="stat-item">
-              <span className="stat-number">{foodWastePerPerson} kg</span>
-              <p className="stat-description">de comida são desperdiçadas por cada brasileiro por ano</p>
-            </div>
+            <StatItem 
+              number={peopleWithoutFood.toLocaleString()} 
+              description="pessoas que não têm o que comer todos os dias" 
+            />
+            <StatItem 
+              number={peopleFoodInsecurity.toLocaleString()} 
+              description="possuem insegurança alimentar" 
+            />
+            <StatItem 
+              number={`${populationSevereHunger},${populationSevereHungerSecondDecimal}%`} 
+              description="da população estão em situação grave" 
+            />
+            <StatItem 
+              number={`${populationModerateOrSevereHunger},${populationModerateOrSevereHungerSecondDecimal}%`} 
+              description="da população estão em situação moderada ou grave" 
+            />
+            <StatItem 
+              number={foodWasteTons.toLocaleString()} 
+              description="toneladas de alimentos são desperdiçadas por ano no Brasil" 
+            />
+            <StatItem 
+              number={`${foodWastePerPerson} kg`} 
+              description="de comida são desperdiçadas por cada brasileiro por ano" 
+            />
           </div>
         </div>
         <p className="stats-footer">*Relatório publicado pela ONU - 2020/2022</p>
@@ -68,7 +69,7 @@ const Home = () => {
       <section className="mission-section">
         <h2 className="mission-title">Nossa Missão</h2>
         <p className="mission-description">
-          O FoodPath tem como missão mobilizar pessoas para fazer parte dessa luta. Acreditamos que, ao reunir esforços, podemos fazer a diferença na vida de quem mais precisa. Nosso objetivo é conectar você a ONGs que trabalham diretamente com a doação de alimentos e recursos para as comunidades mais vulneráveis. A fome não pode esperar, e cada contribuição é um passo em direção à erradicação desse problema. Doar não é apenas um ato de solidariedade, mas uma maneira de transformar realidades e construir um futuro mais justo.
+        O FoodPath tem como missão mobilizar pessoas para fazer parte dessa luta. Acreditamos que, ao reunir esforços, podemos fazer a diferença na vida de quem mais precisa. Nosso objetivo é conectar você a ONGs que trabalham diretamente com a doação de alimentos e recursos para as comunidades mais vulneráveis. A fome não pode esperar, e cada contribuição é um passo em direção à erradicação desse problema. Doar não é apenas um ato de solidariedade, mas uma maneira de transformar realidades e construir um futuro mais justo.
         </p>
       </section>
 

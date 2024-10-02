@@ -13,6 +13,28 @@
   font-family: "Itim", cursive;
 }
 
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.logo-image {
+  width: 50px;
+  height: 50px;
+}
+
+.logo-text {
+  font-size: 1.8rem;
+  font-family: "Itim", cursive;
+  color: var(--link-hover-color);
+  margin-left: 10px;
+  transition: color 0.3s ease;
+}
+
+.logo-text:hover {
+  color: var(--underline-color);
+}
+
 ::-webkit-scrollbar {
   width: 12px;
   background-color: #202020;

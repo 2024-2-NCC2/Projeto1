@@ -22,11 +22,26 @@
   margin-right: 20px;
 }
 
+.image-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 120px;
+}
+
 .image-content img {
-  margin-top: 70px;
   max-width: 700px;
   height: auto;
   object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(252, 141, 215, 0.5);
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: brightness(0.9) contrast(1.1) saturate(1.2) sepia(0.2);
+}
+
+.image-content img:hover {
+  transform: scale(1.05);
+  filter: brightness(1) contrast(1.2) saturate(1.4) sepia(0);
 }
 
 .text-title {
@@ -89,6 +104,7 @@
   padding: 20px 40px;
   border: none;
   border-radius: 8px;
+  text-decoration: none;
   font-size: 2rem;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;

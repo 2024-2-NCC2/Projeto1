@@ -1,7 +1,11 @@
 import React from 'react';
-import Carousel from '../components/Carousel';
 import './css/Home.css';
+import exempleImage from '../public/assets/images/exemple-image-home.jpg';
+
 import useCountUp from '../components/hooks/useCountUp';
+import { Link } from 'react-router-dom';
+
+import Carousel from '../components/Carousel';
 import StatItem from '../components/StatItem';
 
 const Home = () => {
@@ -30,7 +34,7 @@ const Home = () => {
           </p>
         </div>
         <div className="image-content">
-          <img src="https://placehold.co/1400x920" alt="Ilustração da fome" />
+          <img src={exempleImage} alt="Ilustração da fome" />
         </div>
       </section>
       
@@ -41,7 +45,7 @@ const Home = () => {
               number={peopleWithoutFood.toLocaleString()} 
               description="pessoas que não têm o que comer todos os dias" 
             />
-            <StatItem 
+            <StatItem
               number={peopleFoodInsecurity.toLocaleString()} 
               description="possuem insegurança alimentar" 
             />
@@ -78,7 +82,9 @@ const Home = () => {
         <p className="cta-description">
           Seu apoio pode levar esperança e comida para quem mais precisa.
         </p>
-        <button className="cta-button">Faça uma doação!</button>
+        <Link to="/donation" className="cta-button">
+          Faça uma doação!
+        </Link>
       </section>
     </div>
   );

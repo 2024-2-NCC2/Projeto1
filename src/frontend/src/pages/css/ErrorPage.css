@@ -1,0 +1,40 @@
+.error-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(247, 247, 247);
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .error-image {
+    max-width: 20%;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .error-text {
+    color: rgb(255, 122, 151);
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .back-home {
+    display: inline-block;
+    background-color: var(--button-background);
+    color: var(--button-text-color);
+    padding: 20px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.7rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .back-home:hover {
+    background-color: var(--button-hover-background);
+    color: var(--button-text-color);
+  }
+  

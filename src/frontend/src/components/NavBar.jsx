@@ -20,10 +20,10 @@ const NavBar = () => {
               <Link className="nav-link underline" to="/aboutus">Quem Somos</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link underline" to="/donation">Faça uma Doação</Link>
+              <Link className="nav-link underline" to="/contact">Contato</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link underline" to="/contact">Contato</Link>
+              <Link className="nav-link underline" to="/donation">Faça uma Doação</Link>
             </li>
           </ul>
         </div>

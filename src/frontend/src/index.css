@@ -6,6 +6,10 @@
   --underline-color: #b8496a;
   --scrollbar-color: #ee608a;
 }
+
+body {
+  overflow-x: hidden;
+}
   
 * {
   margin: 0;

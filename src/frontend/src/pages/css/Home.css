@@ -46,9 +46,8 @@
 
 .text-title {
   color: var(--link-hover-color);
-  margin-top: 20px;
+  margin-top: 0;
   font-size: 3rem;
-  margin-bottom: 10px;
 }
 
 .text-description {
@@ -58,36 +57,57 @@
 }
 
 .mission-section {
-  padding: 40px;
-  text-align: center;
-  color: var(--text-color);
-  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 40px 0;
+  padding: 20px;
+}
+
+.mission-text-section {
+  flex: 1;
+  padding-right: 10px;
+}
+
+.mission-image-section img {
+  padding-right: 60px;
+  max-width: 100%;
+  height: auto;
+  max-height: 100rem;
 }
 
 .mission-title {
   color: var(--link-hover-color);
+  margin-top: 0;
   font-size: 3rem;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .mission-description {
+  color: var(--text-color);
   font-size: 1.5rem;
-  line-height: 1.8;
-  max-width: 85%;
-  margin: 0 auto;
+  line-height: 1.6;
 }
 
 .call-to-action-section {
-  padding: 10px;
+  background-color: rgba(238, 96, 138, 0.1);
+  border-radius: 10px;
+  padding: 20px;
   text-align: center;
-  color: var(--text-color);
-  margin: 10px 0;
+  margin: 20px 0;
 }
 
 .cta-title {
   color: var(--link-hover-color);
-  font-size: 4rem;
+  font-size: 5rem;
   margin-bottom: 5px;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
 }
 
 .cta-description {
@@ -172,7 +192,7 @@
 }
 
 .stats-wrapper {
-  background-color: #ffdbe5;
+  background-color: rgba(238, 96, 138, 0.1);
   padding: 30px;
   border-radius: 12px;
 }

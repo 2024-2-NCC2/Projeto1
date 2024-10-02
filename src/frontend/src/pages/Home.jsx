@@ -1,6 +1,7 @@
 import React from 'react';
 import './css/Home.css';
 import exempleImage from '../public/assets/images/exemple-image-home.jpg';
+import missionGif from '../public/assets/gifs/mission-foodpath-gif.gif';
 
 import useCountUp from '../components/hooks/useCountUp';
 import { Link } from 'react-router-dom';
@@ -37,7 +38,6 @@ const Home = () => {
           <img src={exempleImage} alt="Ilustração da fome" />
         </div>
       </section>
-      
       <section className="stats-section">
         <div className="stats-wrapper">
           <div className="stats-grid">
@@ -71,12 +71,18 @@ const Home = () => {
         <p className="stats-footer">*Dados do relatório FAO de 2021 e Rede Brasileira de Pesquisa em Soberania e Segurança Alimentar e Nutricional (Rede PENSSAN)</p>
       </section>
       <section className="mission-section">
-        <h2 className="mission-title">Nossa Missão</h2>
-        <p className="mission-description">
-        O FoodPath tem como missão mobilizar pessoas para fazer parte dessa luta. Acreditamos que, ao reunir esforços, podemos fazer a diferença na vida de quem mais precisa. Nosso objetivo é conectar você a ONGs que trabalham diretamente com a doação de alimentos e recursos para as comunidades mais vulneráveis. A fome não pode esperar, e cada contribuição é um passo em direção à erradicação desse problema. Doar não é apenas um ato de solidariedade, mas uma maneira de transformar realidades e construir um futuro mais justo.
-        </p>
+        <div className="mission-text-section">
+          <h2 className="mission-title">Nossa Missão</h2>
+          <p className="mission-description">
+            O FoodPath tem como missão mobilizar pessoas para fazer parte dessa luta. Acreditamos que, ao reunir esforços, podemos fazer a diferença na vida de quem mais precisa. Nosso objetivo é conectar você a ONGs que trabalham diretamente com a doação de alimentos e recursos para as comunidades mais vulneráveis.<br/>
+            <br/>
+            A fome não pode esperar, e cada contribuição é um passo em direção à erradicação desse problema. Doar não é apenas um ato de solidariedade, mas uma maneira de transformar realidades e construir um futuro mais justo.
+          </p>
+        </div>
+        <div className="mission-image-section">
+          <img src={missionGif} alt="Image Icon mission" />
+        </div>
       </section>
-
       <section className="call-to-action-section">
         <h2 className="cta-title">Junte-se a nós nessa causa!</h2>
         <p className="cta-description">

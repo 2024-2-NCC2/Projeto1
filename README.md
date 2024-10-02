@@ -2,7 +2,7 @@
 
 <div align="center">
   <img src="images/fecap-icon-img.png" alt="FecapIcon" width="250" height="250" style="margin-right: 20px;">
-  <img src="images/icon-foodpath-dark.png" alt="FoodPathIcon" width="250" height="250">
+  <img src="images/icon-foodpath-white.png.png" alt="FoodPathIcon" width="250" height="250">
 </div>
 
 O **FoodPath** é um projeto que visa conscientizar as pessoas sobre a situação da fome no Brasil, incentivando doações para ONGs e instituições que combatem essa causa. Através de uma plataforma interativa e informativa, o usuário pode entender melhor o problema e contribuir com doações.

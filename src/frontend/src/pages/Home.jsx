@@ -1,6 +1,6 @@
 import React from 'react';
 import './css/Home.css';
-import exempleImage from '../public/assets/images/exemple-image-home.jpg';
+import reallyImage from '../public/assets/gifs/reality-foodpath-gif.gif';
 import missionGif from '../public/assets/gifs/mission-foodpath-gif.gif';
 
 import useCountUp from '../components/hooks/useCountUp';
@@ -35,7 +35,7 @@ const Home = () => {
           </p>
         </div>
         <div className="image-content">
-          <img src={exempleImage} alt="Ilustração da fome" />
+          <img src={reallyImage} alt="Ilustração da fome" />
         </div>
       </section>
       <section className="stats-section">
@@ -74,10 +74,12 @@ const Home = () => {
         <div className="mission-text-section">
           <h2 className="mission-title">Nossa Missão</h2>
           <p className="mission-description">
-            O FoodPath tem como missão mobilizar pessoas para fazer parte dessa luta. Acreditamos que, ao reunir esforços, podemos fazer a diferença na vida de quem mais precisa. Nosso objetivo é conectar você a ONGs que trabalham diretamente com a doação de alimentos e recursos para as comunidades mais vulneráveis.<br/>
-            <br/>
-            A fome não pode esperar, e cada contribuição é um passo em direção à erradicação desse problema. Doar não é apenas um ato de solidariedade, mas uma maneira de transformar realidades e construir um futuro mais justo.
-          </p>
+          O FoodPath tem como missão mobilizar pessoas para fazer parte dessa luta. Acreditamos que, ao reunir esforços, podemos fazer a diferença na vida de quem mais precisa. Nosso objetivo é conectar você a ONGs que trabalham diretamente com a doação de alimentos e recursos para as comunidades mais vulneráveis. Ao colaborar com essas organizações, você se torna uma parte vital de uma rede que visa não apenas aliviar a fome, mas também proporcionar dignidade e esperança a milhões de brasileiros que enfrentam insegurança alimentar.<br/>
+          <br/>
+          A fome não pode esperar, e cada contribuição é um passo em direção à erradicação desse problema. Doar não é apenas um ato de solidariedade; é uma maneira de transformar realidades e construir um futuro mais justo. Imagine a diferença que você pode fazer: uma simples doação pode garantir que uma família tenha acesso a alimentos frescos e nutritivos, permitindo que crianças cresçam saudáveis e que adultos tenham energia para trabalhar e cuidar de suas responsabilidades.<br/>
+          <br/>
+          Convidamos você a se juntar a nós nesta causa urgente e necessária. Sua generosidade pode iluminar o caminho de quem vive em situações de vulnerabilidade. Cada gesto conta, e juntos, podemos criar um Brasil onde a fome seja apenas uma lembrança do passado. Vamos unir forças e agir!
+        </p>
         </div>
         <div className="mission-image-section">
           <img src={missionGif} alt="Image Icon mission" />

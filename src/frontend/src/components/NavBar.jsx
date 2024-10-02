@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import iconFoodPath from '../public/assets/images/icon-foodpath-home.png';
+import iconFoodPath from '../public/assets/images/icon-foodpath-white.png';
 
 const NavBar = () => {
   return (

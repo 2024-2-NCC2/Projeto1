@@ -25,6 +25,8 @@ body {
 .logo-image {
   width: 50px;
   height: 50px;
+  user-select: none;
+  pointer-events: none;
 }
 
 .logo-text {
@@ -240,4 +242,6 @@ footer {
 .carousel-item img {
   height: 700px;
   object-fit: cover;
+  user-select: none;
+  pointer-events: none;
 }

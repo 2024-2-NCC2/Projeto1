@@ -48,3 +48,9 @@
 .dark-mode .back-home:hover {
   background-color: #ff007f;
 }
+
+.error-image {
+  max-width: 100%;
+  max-height: 40%;
+  margin-bottom: 20px;
+}

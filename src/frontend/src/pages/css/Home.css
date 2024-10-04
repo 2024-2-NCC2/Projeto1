@@ -188,7 +188,7 @@
 }
 
 .stats-wrapper {
-  background-color: rgba(238, 96, 138, 0.1);
+  background-color: rgb(255, 203, 219);
   padding: 30px;
   border-radius: 12px;
 }
@@ -205,7 +205,7 @@
   border-radius: 10px;
   text-align: center;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, color 0.3s ease-in-out; 
-  background-color: #ffd3e080;
+  background-color: #ffd3e0;
   box-shadow: -3px -3px 10px rgba(238, 96, 138, 0.5), -10px 10px 15px rgba(253, 132, 168, 0.7);
   color: var(--link-hover-color);
 }
@@ -227,9 +227,12 @@
 
 .stat-description {
   font-size: 1.7rem;
-  color: #333;
+  color: #c24d70;
 }
 
+.dark-mode .stat-description{
+  color: #c24d70;
+}
 .stats-footer {
   font-size: 1.2rem;
   color: #777;

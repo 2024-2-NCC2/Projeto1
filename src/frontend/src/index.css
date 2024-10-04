@@ -7,14 +7,54 @@
   --scrollbar-color: #ee608a;
 }
 
-body {
-  overflow-x: hidden;
-}
-  
 * {
   margin: 0;
   padding: 0;
   font-family: "Itim", cursive;
+}
+
+body {
+  background-color: white;
+  color: black;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave */
+}
+
+body.dark-mode {
+  background-color: #212529;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body p {
+  color: black;
+  transition: color 0.3s ease;
+}
+
+body.dark-mode p {
+  color: #f1f1f1;
+  transition: color 0.3s ease;
+}
+
+.dark-mode-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-top: -10px;
+  margin-right: -10px;
+  font-size: 1.5rem;
+  color: white;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.dark-mode-toggle:hover {
+  color: #ff007f;
+}
+
+.dark-mode-toggle:focus {
+  outline: none;
 }
 
 .navbar-brand {

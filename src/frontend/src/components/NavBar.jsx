@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import iconFoodPath from '../public/assets/images/icon-foodpath-white.png';
+import { DarkModeToggle } from './DarkModeToggle';
 
 const NavBar = () => {
   return (
@@ -24,6 +25,9 @@ const NavBar = () => {
             </li>
             <li className="nav-item">
               <Link className="nav-link underline" to="/donation">Faça uma Doação</Link>
+            </li>
+            <li className="nav-item">
+              <DarkModeToggle />
             </li>
           </ul>
         </div>

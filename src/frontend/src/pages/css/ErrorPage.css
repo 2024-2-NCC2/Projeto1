@@ -1,42 +1,50 @@
 .error-page {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: rgb(247, 247, 247);
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .error-image {
-    max-width: 20%;
-    height: auto;
-    border-radius: 15px;
-    margin-bottom: 20px;
-    user-select: none;
-    pointer-events: none;
-  }
-  
-  .error-text {
-    color: rgb(255, 122, 151);
-    font-size: 2rem;
-    margin-bottom: 20px;
-  }
-  
-  .back-home {
-    display: inline-block;
-    background-color: var(--button-background);
-    color: var(--button-text-color);
-    padding: 20px 30px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 1.7rem;
-    transition: background-color 0.3s ease;
-  }
-  
-  .back-home:hover {
-    background-color: var(--button-hover-background);
-    color: var(--button-text-color);
-  }
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(247, 247, 247);
+  text-align: center;
+  padding: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.error-text {
+  color: rgb(255, 122, 151);
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.dark-mode .error-page {
+  background-color: #1c1c1c;
+}
+
+.dark-mode .error-text {
+  color: rgb(255, 199, 230);
+}
+
+.back-home {
+  display: inline-block;
+  background-color: var(--button-background);
+  color: var(--button-text-color);
+  padding: 20px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1.7rem;
+  transition: background-color 0.3s ease;
+}
+
+.back-home:hover {
+  background-color: var(--button-hover-background);
+  color: var(--button-text-color);
+}
+
+.dark-mode .back-home {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-mode .back-home:hover {
+  background-color: #ff007f;
+}

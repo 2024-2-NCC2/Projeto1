@@ -18,30 +18,30 @@ const Home = () => {
   const foodWasteTons = useCountUp(12580000, 3000);
   const foodWastePerPerson = useCountUp(60, 3000);
 
-  const [ref1, inView1] = useInView({ triggerOnce: true });
-  const [ref2, inView2] = useInView({ triggerOnce: true });
-  const [ref3, inView3] = useInView({ triggerOnce: true });
-  const [ref4, inView4] = useInView({ triggerOnce: true });
+  const [realitySectionRef, realitySectionInView] = useInView({ triggerOnce: true });
+  const [statsSectionRef, statsSectionInView] = useInView({ triggerOnce: true });
+  const [missionSectionRef, missionSectionInView] = useInView({ triggerOnce: true });
+  const [callToActionRef, callToActionInView] = useInView({ triggerOnce: true });
 
   return (
     <div>
       <Carousel />
       
-      <section ref={ref1} className={`content-section ${inView1 ? 'reveal' : ''}`}>
-        <div className="text-content">
-          <h2 className="text-title">A Realidade</h2>
-          <p className='text-description'>
+      <section ref={realitySectionRef} className={`reality-content-section ${realitySectionInView ? 'reveal' : ''}`}>
+        <div className="reality-text-content">
+          <h2 className="reality-text-title">A Realidade</h2>
+          <p className='reality-text-description'>
           A fome no Brasil é uma realidade devastadora e persistente, que afeta milhões de pessoas em todas as regiões do país. Este grave problema social não se resume apenas à falta de alimentos, mas reflete profundas desigualdades sociais, econômicas e regionais que há muito tempo moldam a estrutura do país. <b>Milhões de brasileiros vivem em situação de vulnerabilidade, sem acesso adequado a alimentos básicos e nutritivos </b>, o que gera impactos sérios e duradouros sobre sua saúde, desenvolvimento e bem-estar. <br/>
           <br/>
           <b>O FoodPath surge como uma iniciativa nesse sentido, um projeto que busca conscientizar, mobilizar e canalizar esforços para a erradicação da fome no Brasil.</b> Nossa plataforma visa não apenas destacar a gravidade do problema, mas também fornecer ferramentas e caminhos práticos para que todos possam contribuir ativamente para essa causa. <b>Somente com a união de forças e o compromisso coletivo poderemos garantir que, um dia, ninguém mais precise passar fome.</b>
           </p>
         </div>
-        <div className="image-content">
-          <img src={reallyImage} alt="Ilustração da fome" />
+        <div className="reality-image-content">
+          <img src={reallyImage} alt="Ilustração da Realidade" />
         </div>
       </section>
 
-      <section ref={ref2} className={`stats-section ${inView2 ? 'reveal' : ''}`}>
+      <section ref={statsSectionRef} className={`stats-section ${statsSectionInView ? 'reveal' : ''}`}>
         <div className="stats-wrapper">
           <div className="stats-grid">
             <StatItem number={peopleWithoutFood.toLocaleString()} description="pessoas que não têm o que comer todos os dias" />
@@ -56,7 +56,7 @@ const Home = () => {
         <p className="stats-footer">*Dados do relatório FAO de 2021 e Rede Brasileira de Pesquisa em Soberania e Segurança Alimentar e Nutricional (Rede PENSSAN)</p>
       </section>
 
-      <section ref={ref3} className={`mission-section ${inView3 ? 'reveal' : ''}`}>
+      <section ref={missionSectionRef} className={`mission-section ${missionSectionInView ? 'reveal' : ''}`}>
         <div className="mission-text-section">
           <h2 className="mission-title">Nossa Missão</h2>
           <p className="mission-description">
@@ -72,7 +72,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section ref={ref4} className={`call-to-action-section ${inView4 ? 'reveal' : ''}`}>
+      <section ref={callToActionRef} className={`call-to-action-section ${callToActionInView ? 'reveal' : ''}`}>
         <h2 className="cta-title">Junte-se a nós nessa causa!</h2>
         <p className="cta-description">Seu apoio pode levar esperança e comida para quem mais precisa.</p>
         <Link to="/donation" className="cta-button">Faça uma doação!</Link>

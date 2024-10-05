@@ -51,6 +51,10 @@
   line-height: 1.6;
 }
 
+.text-description b {
+  color: #ce577a;
+}
+
 .mission-section {
   display: flex;
   align-items: center;
@@ -83,6 +87,10 @@
   color: var(--text-color);
   font-size: 1.5rem;
   line-height: 1.6;
+}
+
+.mission-description b {
+  color: #ce577a;
 }
 
 .call-to-action-section {

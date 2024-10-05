@@ -29,9 +29,9 @@ const Home = () => {
         <div className="text-content">
           <h2 className='text-title'>A Realidade</h2>
           <p className='text-description'>
-          A fome no Brasil é uma realidade devastadora e persistente, que afeta milhões de pessoas em todas as regiões do país. Este grave problema social não se resume apenas à falta de alimentos, mas reflete profundas desigualdades sociais, econômicas e regionais que há muito tempo moldam a estrutura do país. Milhões de brasileiros vivem em situação de vulnerabilidade, sem acesso adequado a alimentos básicos e nutritivos, o que gera impactos sérios e duradouros sobre sua saúde, desenvolvimento e bem-estar. <br/>
+          A fome no Brasil é uma realidade devastadora e persistente, que afeta milhões de pessoas em todas as regiões do país. Este grave problema social não se resume apenas à falta de alimentos, mas reflete profundas desigualdades sociais, econômicas e regionais que há muito tempo moldam a estrutura do país. <b>Milhões de brasileiros vivem em situação de vulnerabilidade, sem acesso adequado a alimentos básicos e nutritivos </b>, o que gera impactos sérios e duradouros sobre sua saúde, desenvolvimento e bem-estar. <br/>
           <br/>
-          O FoodPath surge como uma iniciativa nesse sentido, um projeto que busca conscientizar, mobilizar e canalizar esforços para a erradicação da fome no Brasil. Nossa plataforma visa não apenas destacar a gravidade do problema, mas também fornecer ferramentas e caminhos práticos para que todos possam contribuir ativamente para essa causa. Somente com a união de forças e o compromisso coletivo poderemos garantir que, um dia, ninguém mais precise passar fome.
+          <b>O FoodPath surge como uma iniciativa nesse sentido, um projeto que busca conscientizar, mobilizar e canalizar esforços para a erradicação da fome no Brasil.</b> Nossa plataforma visa não apenas destacar a gravidade do problema, mas também fornecer ferramentas e caminhos práticos para que todos possam contribuir ativamente para essa causa. <b>Somente com a união de forças e o compromisso coletivo poderemos garantir que, um dia, ninguém mais precise passar fome.</b>
           </p>
         </div>
         <div className="image-content">
@@ -74,11 +74,11 @@ const Home = () => {
         <div className="mission-text-section">
           <h2 className="mission-title">Nossa Missão</h2>
           <p className="mission-description">
-          O FoodPath tem como missão mobilizar pessoas para fazer parte dessa luta. Acreditamos que, ao reunir esforços, podemos fazer a diferença na vida de quem mais precisa. Nosso objetivo é conectar você a ONGs que trabalham diretamente com a doação de alimentos e recursos para as comunidades mais vulneráveis. Ao colaborar com essas organizações, você se torna uma parte vital de uma rede que visa não apenas aliviar a fome, mas também proporcionar dignidade e esperança a milhões de brasileiros que enfrentam insegurança alimentar.<br/>
+          O FoodPath tem como missão mobilizar pessoas para fazer parte dessa luta. Acreditamos que, ao reunir esforços, podemos fazer a diferença na vida de quem mais precisa. <b>Nosso objetivo é conectar você a ONGs que trabalham diretamente com a doação de alimentos e recursos para as comunidades mais vulneráveis.</b> Ao colaborar com essas organizações, você se torna uma parte vital de uma rede que visa não apenas aliviar a fome, mas também proporcionar dignidade e esperança a milhões de brasileiros que enfrentam insegurança alimentar.<br/>
           <br/>
           A fome não pode esperar, e cada contribuição é um passo em direção à erradicação desse problema. Doar não é apenas um ato de solidariedade; é uma maneira de transformar realidades e construir um futuro mais justo. Imagine a diferença que você pode fazer: uma simples doação pode garantir que uma família tenha acesso a alimentos frescos e nutritivos, permitindo que crianças cresçam saudáveis e que adultos tenham energia para trabalhar e cuidar de suas responsabilidades.<br/>
           <br/>
-          Convidamos você a se juntar a nós nesta causa urgente e necessária. Sua generosidade pode iluminar o caminho de quem vive em situações de vulnerabilidade. Cada gesto conta, e juntos, podemos criar um Brasil onde a fome seja apenas uma lembrança do passado. Vamos unir forças e agir!
+          Convidamos você a se juntar a nós nesta causa urgente e necessária. Sua generosidade pode iluminar o caminho de quem vive em situações de vulnerabilidade. Cada gesto conta, e juntos, <b>podemos criar um Brasil onde a fome seja apenas uma lembrança do passado. Vamos unir forças e agir!</b>
         </p>
         </div>
         <div className="mission-image-section">

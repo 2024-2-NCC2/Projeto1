@@ -1,6 +1,7 @@
 import React from 'react';
-import errorImage from '../public/assets/gifs/error-not-found-foodpath-gif.gif';
-import './css/ErrorPage.css';
+import './ErrorPage.css';
+
+import errorImage from '../../public/assets/gifs/error-not-found-foodpath-gif.gif';
 
 const ErrorPage = () => {
   return (

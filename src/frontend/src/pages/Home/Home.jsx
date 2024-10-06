@@ -1,12 +1,15 @@
 import React from 'react';
-import './css/Home.css';
-import reallyImage from '../public/assets/gifs/reality-foodpath-gif.gif';
-import missionGif from '../public/assets/gifs/mission-foodpath-gif.gif';
-import useCountUp from '../components/hooks/useCountUp';
 import { Link } from 'react-router-dom';
-import Carousel from '../components/Carousel';
-import StatItem from '../components/StatItem';
 import { useInView } from 'react-intersection-observer';
+import './Home.css';
+
+import realityImage from '../../public/assets/gifs/reality-foodpath-gif.gif';
+import missionGif from '../../public/assets/gifs/mission-foodpath-gif.gif';
+
+import useCountUp from '../../components/hooks/useCountUp';
+
+import Carousel from '../../components/Carousel';
+import StatItem from '../../components/StatItem';
 
 const Home = () => {
   const peopleWithoutFood = useCountUp(21100000, 3000);
@@ -37,7 +40,7 @@ const Home = () => {
           </p>
         </div>
         <div className="reality-image-content">
-          <img src={reallyImage} alt="Ilustração da Realidade" />
+          <img src={realityImage} alt="Ilustração da Realidade" />
         </div>
       </section>
 

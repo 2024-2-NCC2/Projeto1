@@ -5,12 +5,12 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import './index.css'
 
 import App from './App.jsx'
-import Home from './pages/Home.jsx';
-import AboutUs from './pages/AboutUs.jsx';
+import Home from './pages/Home/Home.jsx';
+import AboutUs from './pages/AboutUs/AboutUs.jsx';
 import Donation from './pages/Donation.jsx';
 import Signin from './pages/Signin.jsx';
 import Login from './pages/Login.jsx';
-import ErrorPage from './pages/ErrorPage.jsx';
+import ErrorPage from './pages/ErrorPage/ErrorPage.jsx';
 
 const router = createBrowserRouter([
   {

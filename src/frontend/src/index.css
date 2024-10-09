@@ -221,7 +221,7 @@ footer {
 }
 
 .footer-left b{
-  color: rgb(174, 255, 171);
+  color: var(--link-hover-color);
 }
 .footer-content {
   display: flex;

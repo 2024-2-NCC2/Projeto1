@@ -15,8 +15,8 @@ const AboutUs = () => {
       >
         <h2 className="about-us-title">Quem somos?</h2>
         <p className="about-us-description">
-          Nosso projeto, FoodPath, foi criado para <b>aumentar a conscientização sobre a fome no Brasil 
-          e facilitar a doação para ONGs que estão ativamente combatendo essa questão.</b>
+          Nosso projeto, FoodPath, foi criado para <b>aumentar a conscientização sobre a fome no Brasil </b>
+          e <b>facilitar a doação para ONGs</b> que estão ativamente combatendo essa questão.
         </p>
         <p className="about-us-description">
           Cada um de nós estamos trabalhando e colaborando para construir uma plataforma que <b>conecte 

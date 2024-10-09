@@ -7,14 +7,14 @@
     margin: 20px;
     overflow: hidden;
     transition: transform 0.5s ease;
-}
-
-.card:hover {
-  transform: translateY(-10px);
-  transition-delay: 0.2s;
-}
-
-.dark-mode .card {
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    transition-delay: 0.2s;
+  }
+  
+  .dark-mode .card {
     background-color: #1a1d20;
   }
   
@@ -32,6 +32,10 @@
   
   .card-content {
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50%;
   }
   
   .card-title {
@@ -44,6 +48,7 @@
     font-size: 1.1rem;
     color: #666;
     margin-bottom: 20px;
+    flex-grow: 1;
   }
   
   .card-button {
@@ -63,5 +68,4 @@
   
   .card-button i {
     margin-left: 10px;
-  }
-  
+  }  

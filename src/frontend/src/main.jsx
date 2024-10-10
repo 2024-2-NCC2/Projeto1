@@ -7,6 +7,7 @@ import './index.css'
 import App from './App.jsx'
 import Home from './pages/Home/Home.jsx';
 import AboutUs from './pages/AboutUs/AboutUs.jsx';
+import Contact from './pages/Contact/Contact.jsx';
 import Donation from './pages/Donation/Donation.jsx';
 import Signin from './pages/Signin.jsx';
 import Login from './pages/Login.jsx';
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
       {
         path:"aboutus",
         element: <AboutUs/>
+      },
+      {
+        path:"contact",
+        element: <Contact/>
       },
       {
       path:"donation",

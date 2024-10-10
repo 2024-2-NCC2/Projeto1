@@ -190,6 +190,13 @@ body.dark-mode p {
   width: 100%;
 }
 
+.carousel-item img {
+  height: 700px;
+  object-fit: cover;
+  user-select: none;
+  pointer-events: none;
+}
+
 @media (hover: hover) and (pointer: fine) {
   .underline:hover::before {
       left: 0;
@@ -277,11 +284,4 @@ footer {
     flex-direction: column;
     align-items: flex-start;
   }
-}
-
-.carousel-item img {
-  height: 700px;
-  object-fit: cover;
-  user-select: none;
-  pointer-events: none;
 }

@@ -1,0 +1,90 @@
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+  
+  .contact-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff4181;
+    color: white;
+    width: 100%;
+    padding: 40px;
+  }
+  
+  .contact-text {
+    flex: 1;
+    margin-left: 100px;
+  }
+  
+  .contact-text h1 {
+    font-size: 7.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .contact-text p {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    margin-left: 100px;
+    color: white;
+  }
+  
+  .contact-image img {
+    max-width: 100%;
+    margin-right: 160px;
+    height: auto;
+  }
+  
+  .contact-options {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    width: 80%;
+  }
+  
+  .contact-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .dark-mode .contact-option svg {
+    color: #fff;
+  }
+  
+  
+  .contact-option h3 {
+    margin-top: 10px;
+    font-size: 2rem;
+    color: #ff3f7f;
+  }
+  
+  .contact-option p {
+    margin: 5px 0;
+    font-size: 1.2rem;
+  }
+  
+  .contact-option a {
+    color: var(--link-color);
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: #e785a5;
+    text-decoration: none;
+    margin-top: 1px;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  .contact-option a:hover {
+    color: #f06c98;
+    text-shadow: 
+      0 0 2rem var(--link-hover-color), 
+      0 0 12px var(--link-hover-color), 
+      0 0 1px var(--link-hover-color);
+  }
+  

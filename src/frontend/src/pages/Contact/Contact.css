@@ -79,6 +79,17 @@
     position: relative;
     transition: color 0.3s ease;
   }
+
+  .contact-banner, .contact-option {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .contact-banner.reveal, .contact-option.reveal {
+    opacity: 1;
+    transform: translateY(0);
+  }  
   
   .contact-option a:hover {
     color: #f06c98;

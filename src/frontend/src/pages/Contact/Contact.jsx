@@ -3,11 +3,17 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faCamera, faX } from '@fortawesome/free-solid-svg-icons';
 import './Contact.css';
 import contactGif from '../../public/assets/gifs/contact-foodpath-gif.gif';
+import { useInView } from 'react-intersection-observer';
 
 const Contact = () => {
+  const [bannerRef, bannerInView] = useInView({ triggerOnce: true });
+  const [emailRef, emailInView] = useInView({ triggerOnce: true });
+  const [instagramRef, instagramInView] = useInView({ triggerOnce: true });
+  const [xRef, xInView] = useInView({ triggerOnce: true });
+
   return (
     <div className="contact-container">
-      <div className="contact-banner">
+      <div ref={bannerRef} className={`contact-banner ${bannerInView ? 'reveal' : ''}`}>
         <div className="contact-text">
           <h1>FALE CONOSCO!</h1>
           <p>Se você tiver dúvidas, sugestões ou quiser saber mais <br /> 
@@ -19,7 +25,7 @@ const Contact = () => {
       </div>
 
       <div className="contact-options">
-        <div className="contact-option">
+        <div ref={emailRef} className={`contact-option ${emailInView ? 'reveal' : ''}`}>
           <FontAwesomeIcon icon={faEnvelope} size="6x" />
           <h3>E-mail</h3>
           <p>Tem alguma dúvida?</p>
@@ -28,7 +34,7 @@ const Contact = () => {
           </a>
         </div>
 
-        <div className="contact-option">
+        <div ref={instagramRef} className={`contact-option ${instagramInView ? 'reveal' : ''}`}>
           <FontAwesomeIcon icon={faCamera} size="6x" />
           <h3>Instagram</h3>
           <p>Fique por dentro de tudo!</p>
@@ -37,7 +43,7 @@ const Contact = () => {
           </a>
         </div>
 
-        <div className="contact-option">
+        <div ref={xRef} className={`contact-option ${xInView ? 'reveal' : ''}`}>
           <FontAwesomeIcon icon={faX} size="6x" />
           <h3>X</h3>
           <p>Acompanhe nossas atualizações!</p>

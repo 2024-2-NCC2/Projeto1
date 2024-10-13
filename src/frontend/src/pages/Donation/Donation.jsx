@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from '../../components/Card/Card';
 import './Donation.css';
+import { useInView } from 'react-intersection-observer';
 
 import bancoAlimentosImg from '../../public/assets/images/ongs/ong-banco-alimentos-card.png';
 import misturaiImg from '../../public/assets/images/ongs/ong-misturai-card.png';
@@ -10,6 +11,8 @@ import sescImg from '../../public/assets/images/ongs/ong-sesc-card.png';
 import caritasBrasilImg from '../../public/assets/images/ongs/ong-caritas-brasileira-card.png';
 
 const Donation = () => {
+  const [cardsRef, cardsInView] = useInView({ triggerOnce: true });
+
   return (
     <div className="donation-page">
       <h1>Escolha uma ONG para apoiar!</h1>
@@ -17,7 +20,7 @@ const Donation = () => {
         Selecione uma das organizações abaixo e contribua diretamente para a luta contra a fome. <br/>
         Sua doação pode fazer toda diferença!
       </p>
-      <div className="donation-cards">
+      <div ref={cardsRef} className={`donation-cards ${cardsInView ? 'reveal' : ''}`}>
         <Card 
           title="Banco de Alimentos"
           description="Fundada em 1998, a ONG Banco de Alimentos é uma associação civil que recolhe alimentos que já perderam valor de prateleira no comércio e indústria, mas ainda estão aptos para consumo, e os distribui onde são mais necessários."

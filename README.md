@@ -19,7 +19,7 @@ O objetivo principal do FoodPath é contribuir para o **Objetivo de Desenvolvime
 
 ## 📊 **Dados e Análise**
 
-O site contabiliza as doações e redirecionamentos feitos para ONGs localizadas em diferentes regiões, utilizando essa informação para gerar gráficos e análises que mostram a distribuição de redirecionamentos, destacando os locais com mais e menos contribuições.
+O site contabiliza as doações e redirecionamentos feitos para ONGs localizadas em diferentes regiões, utilizando essa informação para gerar gráficos e análises que mostram a distribuição de redirecionamentos, destacando os locais com mais e menos contribuições. Cada dado é retirado do nosso [Banco de Dados](docs/Entrega%202/BD/README.md).
 
 ## 👥 **Integrantes do Projeto**
 

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Register.css';
 import IconFoodPath from '../../public/assets/images/icon-foodpath-white.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -10,6 +11,9 @@ const Register = () => {
   const [passwordVisible, setPasswordVisible] = useState(false);
   const [confirmPasswordVisible, setConfirmPasswordVisible] = useState(false);
   const [error, setError] = useState('');
+  const [nome, setNome] = useState('');
+  const [email, setEmail] = useState('');
+  const navigate = useNavigate();
 
   const togglePasswordVisibility = () => {
     setPasswordVisible(!passwordVisible);
@@ -19,14 +23,37 @@ const Register = () => {
     setConfirmPasswordVisible(!confirmPasswordVisible);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (password !== confirmPassword) {
       setError('As senhas não coincidem.');
       return;
     }
-    // Lógica para criar a conta
-    setError(''); // Reseta o erro
+
+    try {
+      const response = await fetch('http://localhost:5000/register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: nome,
+          email,
+          password,
+        }),
+      });
+
+      const data = await response.json();
+      if (response.ok) {
+        console.log('Usuário registrado com sucesso', data);
+        navigate('/login');
+      } else {
+        setError(data.error);
+      }
+    } catch (error) {
+      console.error('Erro ao registrar', error);
+      setError('Erro ao registrar. Tente novamente.');
+    }
   };
 
   return (
@@ -42,13 +69,27 @@ const Register = () => {
           <div className="register-input-group">
             <FontAwesomeIcon icon={faEnvelope} className="register-input-icon" />
             <label className="register-label">Email</label>
-            <input type="email" className="register-input" placeholder="Exemplo: seuemail@exemplo.com" required />
+            <input
+              type="email"
+              className="register-input"
+              placeholder="Exemplo: seuemail@exemplo.com"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
           </div>
 
           <div className="register-input-group">
             <FontAwesomeIcon icon={faUser} className="register-input-icon" />
             <label className="register-label">Nome</label>
-            <input type="text" className="register-input" placeholder="Exemplo: Nome Sobrenome" required />
+            <input
+              type="text"
+              className="register-input"
+              placeholder="Exemplo: Nome Sobrenome"
+              required
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
           </div>
 
           <div className="register-input-group">
@@ -89,11 +130,11 @@ const Register = () => {
 
           {error && <p className="register-error">{error}</p>}
 
+          <button type="submit" className="register-button">Registrar</button>
+
           <p className="register-login-link">
             Já possui uma conta? <a href="/login">Fazer Login</a>
           </p>
-
-          <button type="submit" className="register-button">Registrar</button>
         </form>
       </div>
     </div>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Login.css';
 import IconFoodPath from '../../public/assets/images/icon-foodpath-white.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -6,9 +7,41 @@ import { faEnvelope, faLock, faEye, faEyeSlash } from '@fortawesome/free-solid-s
 
 const Login = () => {
   const [passwordVisible, setPasswordVisible] = useState(false);
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const navigate = useNavigate();
 
   const togglePasswordVisibility = () => {
     setPasswordVisible(!passwordVisible);
+  };
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch('http://localhost:5000/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email,
+          password,
+        }),
+      });
+
+      const data = await response.json();
+      if (response.ok) {
+        console.log('Login bem-sucedido', data);
+        localStorage.setItem('token', data.token);
+        navigate('/');
+      } else {
+        setError(data.error);
+      }
+    } catch (error) {
+      console.error('Erro ao fazer login', error);
+      setError('Erro ao fazer login. Tente novamente.');
+    }
   };
 
   return (
@@ -20,11 +53,18 @@ const Login = () => {
 
       <div className="login-right">
         <h2 className="login-title">Fazer Login</h2>
-        <form className="login-form">
+        <form className="login-form" onSubmit={handleLogin}>
           <div className="login-input-group">
             <FontAwesomeIcon icon={faEnvelope} className="login-input-icon" />
             <label className="login-label">Email</label>
-            <input type="email" className="login-input" placeholder="Digite seu email" required />
+            <input
+              type="email"
+              className="login-input"
+              placeholder="Digite seu email"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
           </div>
 
           <div className="login-input-group">
@@ -35,6 +75,8 @@ const Login = () => {
               className="login-input"
               placeholder="Digite sua senha"
               required
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
             />
             <FontAwesomeIcon
               icon={passwordVisible ? faEye : faEyeSlash}
@@ -42,6 +84,8 @@ const Login = () => {
               onClick={togglePasswordVisibility}
             />
           </div>
+
+          {error && <p className="login-error">{error}</p>}
 
           <p className="login-forgot-password">
             <a href="/forgot-password">Esqueci minha senha</a>

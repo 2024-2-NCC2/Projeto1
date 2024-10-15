@@ -1,6 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faCamera, faX } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faInstagram, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import './Contact.css';
 import contactGif from '../../public/assets/gifs/contact-foodpath-gif.gif';
 import { useInView } from 'react-intersection-observer';
@@ -35,7 +36,7 @@ const Contact = () => {
         </div>
 
         <div ref={instagramRef} className={`contact-option ${instagramInView ? 'reveal' : ''}`}>
-          <FontAwesomeIcon icon={faCamera} size="6x" />
+          <FontAwesomeIcon icon={faInstagram} size="6x" />
           <h3>Instagram</h3>
           <p>Fique por dentro de tudo!</p>
           <a href="https://instagram.com/foodpathoficial" target="_blank" rel="noopener noreferrer" className="underline">
@@ -44,7 +45,7 @@ const Contact = () => {
         </div>
 
         <div ref={xRef} className={`contact-option ${xInView ? 'reveal' : ''}`}>
-          <FontAwesomeIcon icon={faX} size="6x" />
+          <FontAwesomeIcon icon={faXTwitter} size="6x" />
           <h3>X</h3>
           <p>Acompanhe nossas atualizações!</p>
           <a href="https://x.com/foodpathoficial" target="_blank" rel="noopener noreferrer" className="underline">

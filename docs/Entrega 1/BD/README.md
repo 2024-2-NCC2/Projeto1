@@ -24,9 +24,11 @@ Cada interação que ocorre no **FoodPath** é registrada no banco de dados, e e
 
 ## 💻 Tecnologias
 
-O sistema **FoodPath** adota um banco de dados relacional baseado em **SQL** porque esse modelo permite organizar e acessar dados de maneira eficiente, especialmente em sistemas que exigem relações claras entre diferentes entidades. Como nossa aplicação trabalha com o cadastro de usuários, ONGs e redirecionamentos, a estrutura relacional do SQL é ideal para mapear essas relações de maneira eficiente.
+O sistema FoodPath adota um banco de dados relacional baseado em SQL porque esse modelo permite organizar e acessar dados de maneira eficiente, especialmente em sistemas que exigem relações claras entre diferentes entidades.
+Como nossa aplicação trabalha com o cadastro de usuários, ONGs e redirecionamentos, a estrutura relacional do SQL é ideal para mapear essas relações de maneira eficiente.
 
-Com base nisso, escolhemos o **MySQL** como a tecnologia de banco de dados. Ele é uma solução robusta e amplamente usada, que suporta o modelo relacional e oferece ótima integração com o backend em **Node.js**, que utilizamos no projeto. O **MySQL** também é conhecido por seu bom desempenho e escalabilidade, fatores cruciais à medida que o número de usuários e ONGs na plataforma cresce.
+Com base nisso, escolhemos o SQLite como a tecnologia de banco de dados. O SQLite é uma solução leve, simples de configurar e amplamente usada, que suporta o modelo relacional e oferece ótima integração com o backend em Node.js, que utilizamos no projeto. Ele é ideal para aplicações de menor escala, oferecendo simplicidade sem a necessidade de um servidor dedicado, 
+o que facilita o desenvolvimento inicial.
 
 ## 📋 Conclusão
 

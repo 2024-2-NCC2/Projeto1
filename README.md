@@ -11,7 +11,7 @@ O **FoodPath** é um projeto que visa conscientizar as pessoas sobre a situaçã
 
 - **Front-end**: React, JavaScript, HTML, CSS, Bootstrap
 - **Back-end**: Node.js com Express
-- **Banco de Dados**: MySQL
+- **Banco de Dados**: SQLite
 
 ## 🎯 **Objetivos**
 

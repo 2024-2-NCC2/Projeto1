@@ -23,6 +23,25 @@ db.run(`
   )
 `);
 
+db.run(`
+  CREATE TABLE IF NOT EXISTS ongs (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    description TEXT NOT NULL,
+    link TEXT NOT NULL,
+    imageSrc TEXT
+  )
+`);
+
+db.run(`INSERT INTO ongs (name, description, link, imageSrc) VALUES 
+  ('Banco de Alimentos', 'Fundada em 1998, a ONG Banco de Alimentos é uma associação civil que recolhe alimentos que já perderam valor de prateleira no comércio e indústria, mas ainda estão aptos para consumo, e os distribui onde são mais necessários.', 'https://bancodealimentos.colabore.org/doe-ong-banco-de-alimentos-pf/single_step?utm_campaign=pf&utm_medium=botao&utm_source=site', 'bancoAlimentosImg'),
+  ('Misturaí', 'Criado em março de 2020, o projeto da ONG Misturaí, com sede no Rio Grande do Sul, surgiu em resposta ao aumento da fome e à crise econômica e sanitária. Seu objetivo é distribuir diariamente refeições para pessoas em vulnerabilidade social.', 'https://misturai.com/como-ajudar/', 'misturaiImg'),
+  ('Stop Hunger', 'O Stop Hunger, criado em 1996 por colaboradores da Sodexo nos EUA, é uma força global na luta contra a fome e a má nutrição. No Brasil, atua desde 2003 e, há seis anos, estabeleceu o Instituto Stop Hunger para promover iniciativas no país.', 'https://br.stop-hunger.org/home/contact-form.html', 'stopHungerImg'),
+  ('Ação Cidadania', 'A Ação da Cidadania trabalha para garantir que todos tenham acesso à alimentação adequada, unindo esforços em ações práticas e políticas. Eles possuem compromisso em transformar vidas, construindo um Brasil onde ninguém passe fome.', 'https://www.acaodacidadania.org.br/como-apoiar', 'acaoCidadaniaImg'),
+  ('Sesc - Mesa Brasil', 'A Sesc Mesa Brasil é a maior rede privada de bancos de alimentos da América Latina, combatendo a fome e o desperdício, a partir de doações de parceiros, e contribuindo para a garantia da segurança alimentar e nutricional em todo o Brasil.', 'https://www.sesc.com.br/atuacoes/assistencia/sesc-mesa-brasil/participe/', 'sescImg'),
+  ('Cáritas Brasileira - Sumaúma', 'As atividades são realizadas na cidade de Boa Vista, e o projeto tem como objetivo promover o acesso a refeições preparadas que atendam às necessidades e preferências nutricionais especializadas de grupos vulneráveis, como gestantes e bebês.', 'https://caritas.org.br/colabore', 'caritasBrasilImg')
+`);
+
 app.post('/register', async (req, res) => {
   const { name, email, password } = req.body;
 
@@ -60,6 +79,15 @@ app.post('/login', (req, res) => {
 
       res.json({ message: 'Login bem-sucedido', token });
     });
+  });
+});
+
+app.get('/ongs', (req, res) => {
+  db.all('SELECT * FROM ongs', (err, rows) => {
+    if (err) {
+      return res.status(500).json({ error: 'Erro ao buscar ONGs' });
+    }
+    res.json(rows);
   });
 });
 

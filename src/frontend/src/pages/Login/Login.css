@@ -125,6 +125,11 @@
     color: #ff4473;
     text-decoration: none;
     font-weight: 500;
+    transition: color 0.3s;
+  }
+
+  .login-register-link a:hover {
+    color: #e26280;
   }
   
   @media (max-width: 768px) {

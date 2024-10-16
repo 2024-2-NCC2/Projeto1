@@ -129,10 +129,12 @@
 .register-login-link a {
   color: #ff4473;
   text-decoration: none;
+  transition: color 0.3s;
 }
 
 .register-login-link a:hover {
-  text-decoration: underline;
+  text-decoration: none;
+  color: #e26280;
 }
 
 .register-error {

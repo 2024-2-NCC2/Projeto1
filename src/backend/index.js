@@ -91,6 +91,28 @@ app.get('/ongs', (req, res) => {
   });
 });
 
+app.get('/profile', (req, res) => {
+  const token = req.headers['authorization']?.split(' ')[1];
+  if (!token) {
+    return res.status(401).json({ error: 'Token não fornecido' });
+  }
+
+  jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
+    if (err) {
+      return res.status(401).json({ error: 'Token inválido' });
+    }
+
+    const userId = decoded.id;
+    db.get('SELECT name FROM users WHERE id = ?', [userId], (err, row) => {
+      if (err || !row) {
+        return res.status(404).json({ error: 'Usuário não encontrado' });
+      }
+
+      res.json({ username: row.name });
+    });
+  });
+});
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Servidor rodando na porta ${PORT}`);

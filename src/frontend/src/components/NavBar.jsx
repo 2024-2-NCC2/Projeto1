@@ -1,10 +1,34 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCircleUser } from '@fortawesome/free-solid-svg-icons';
 import iconFoodPath from '../public/assets/images/icon-foodpath-white.png';
 import { DarkModeToggle } from './DarkModeToggle';
 
 const NavBar = () => {
+  const [username, setUsername] = useState(null);
+
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+
+    if (token) {
+      fetch('http://localhost:5000/profile', {
+        headers: {
+          'Authorization': `Bearer ${token}`
+        }
+      })
+        .then(response => response.json())
+        .then(data => {
+          if (data.username) {
+            setUsername(data.username);
+          }
+        })
+        .catch(() => {
+          setUsername(null);
+        });
+    }
+  }, []);
+
   return (
     <nav className="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
       <div className="container-fluid">
@@ -26,6 +50,14 @@ const NavBar = () => {
             <li className="nav-item">
               <Link className="nav-link underline" to="/donation">Faça uma Doação</Link>
             </li>
+            <li className="nav-item user-profile">
+            <FontAwesomeIcon icon={faCircleUser} size="2x" className="user-profile-icon" />
+            {username ? (
+              <span className="user-name">{username}</span>
+            ) : (
+              <Link className="login-link underline" to="/login">Fazer Login</Link>
+            )}
+            </li>
             <li className="nav-item">
               <DarkModeToggle />
             </li>
@@ -34,6 +66,6 @@ const NavBar = () => {
       </div>
     </nav>
   );
-}
+};
 
 export default NavBar;

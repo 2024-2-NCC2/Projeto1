@@ -139,11 +139,17 @@ body.dark-mode p {
 
 .user-profile-icon {
   margin-bottom: 0;
-  color: white;
+  color: #fff;
+  transition: color 0.3s ease-in-out;
+}
+
+.user-profile-icon:hover {
+  cursor: pointer;
+  color: #ff5b79;
 }
 
 .user-name {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   text-align: center;
   color: white;
 }

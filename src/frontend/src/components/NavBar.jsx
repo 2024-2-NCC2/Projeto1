@@ -29,6 +29,11 @@ const NavBar = () => {
     }
   }, []);
 
+  const handleLogout = () => {
+    localStorage.removeItem('token');
+    setUsername(null);
+  };
+
   return (
     <nav className="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
       <div className="container-fluid">
@@ -51,7 +56,12 @@ const NavBar = () => {
               <Link className="nav-link underline" to="/donation">Faça uma Doação</Link>
             </li>
             <li className="nav-item user-profile">
-            <FontAwesomeIcon icon={faCircleUser} size="2x" className="user-profile-icon" />
+            <FontAwesomeIcon
+            icon={faCircleUser}
+            size="2x" 
+            className="user-profile-icon" 
+            onClick={handleLogout} 
+            />
             {username ? (
               <span className="user-name">{username}</span>
             ) : (

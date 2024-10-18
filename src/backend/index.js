@@ -33,6 +33,18 @@ db.run(`
   )
 `);
 
+db.run(`
+  CREATE TABLE IF NOT EXISTS redirect (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER,
+    ong_id INTEGER,
+    ong_name TEXT,
+    redirect_date TEXT,
+    FOREIGN KEY(user_id) REFERENCES users(id),
+    FOREIGN KEY(ong_id) REFERENCES ongs(id)
+  )
+`);
+
 // db.run(`INSERT INTO ongs (name, description, link, imageSrc) VALUES 
 //   ('Banco de Alimentos', 'Fundada em 1998, a ONG Banco de Alimentos é uma associação civil que recolhe alimentos que já perderam valor de prateleira no comércio e indústria, mas ainda estão aptos para consumo, e os distribui onde são mais necessários.', 'https://bancodealimentos.colabore.org/doe-ong-banco-de-alimentos-pf/single_step?utm_campaign=pf&utm_medium=botao&utm_source=site', 'bancoAlimentosImg'),
 //   ('Misturaí', 'Criado em março de 2020, o projeto da ONG Misturaí, com sede no Rio Grande do Sul, surgiu em resposta ao aumento da fome e à crise econômica e sanitária. Seu objetivo é distribuir diariamente refeições para pessoas em vulnerabilidade social.', 'https://misturai.com/como-ajudar/', 'misturaiImg'),
@@ -82,6 +94,22 @@ app.post('/login', (req, res) => {
   });
 });
 
+app.post('/redirect', (req, res) => {
+  const { userId, ongId, ongName } = req.body;
+  const redirectDate = new Date().toISOString();
+
+  db.run(
+    'INSERT INTO redirect (user_id, ong_id, ong_name, redirect_date) VALUES (?, ?, ?, ?)',
+    [userId, ongId, ongName, redirectDate],
+    function (err) {
+      if (err) {
+        return res.status(500).json({ error: 'Erro ao registrar o redirecionamento' });
+      }
+      res.status(201).json({ message: 'Redirecionamento registrado com sucesso!' });
+    }
+  );
+});
+
 app.get('/ongs', (req, res) => {
   db.all('SELECT * FROM ongs', (err, rows) => {
     if (err) {
@@ -103,12 +131,11 @@ app.get('/profile', (req, res) => {
     }
 
     const userId = decoded.id;
-    db.get('SELECT name FROM users WHERE id = ?', [userId], (err, row) => {
+    db.get('SELECT id, name FROM users WHERE id = ?', [userId], (err, row) => {
       if (err || !row) {
         return res.status(404).json({ error: 'Usuário não encontrado' });
       }
-
-      res.json({ username: row.name });
+      res.json({ id: row.id, username: row.name });
     });
   });
 });

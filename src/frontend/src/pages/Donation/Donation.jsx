@@ -13,7 +13,7 @@ import caritasBrasilImg from '../../public/assets/images/ongs/ong-caritas-brasil
 
 import loadingGif from '../../public/assets/gifs/loading-gif.gif';
 
-const Donation = () => {
+const Donation = ({ userId }) => {
   const [ongs, setOngs] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
@@ -79,6 +79,8 @@ const Donation = () => {
               description={ong.description}
               link={ong.link}
               imageSrc={getImageByTitle(ong.name)}
+              userId={userId}
+              ongId={ong.id}
             />
           ))}
         </div>

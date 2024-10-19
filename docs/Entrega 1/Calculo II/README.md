@@ -1,4 +1,4 @@
-# Cálculo II - FoodPath
+# Cálculo II - Entrega 1
 
 ## 1. Coleta de Dados de Doações por Região 📊
 No projeto **FoodPath**, será implementado um sistema que contabiliza os redirecionamentos feitos para ONGs localizadas em diferentes regiões, como **Norte**, **Nordeste**, **Sudeste**, **Sul** e **Centro-Oeste**. Cada vez que um usuário for redirecionado para a página de uma ONG, a região dessa organização será registrada. Isso permitirá que os dados sejam organizados e analisados posteriormente, possibilitando a criação de gráficos que mostrem a distribuição dos redirecionamentos para as ONGs entre as regiões.

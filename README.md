@@ -88,8 +88,11 @@ O design e planejamento visual do site FoodPath foi criado no Figma. Você pode 
 
 <div style="text-align: center; font-size: 18px;">
     <img src="/images/demons-foodpath-pages.gif" alt="Demonstração do site - All Pages" /><br>
+    <p>Estas são as páginas principais do site FoodPath, incluindo suas funcionalidades, informações importantes e navegação geral.</p>
     <img src="/images/demons-foodpath-ongs.gif" alt="Demonstração do site - ONGs Page" /><br>
-    <img src="/images/demons-foodpath-user.gif" alt="Demonstração do site - User Page" />
+    <p>Aqui mostramos a seção de doações do FoodPath, onde o usuário pode visualizar diversas ONGs e escolher uma delas para realizar uma doação.</p>
+    <img src="/images/demons-foodpath-user.gif" alt="Demonstração do site - User Page" /><br>
+    <p>Esta demonstração exibe a página de login e criação de conta, onde os usuários podem acessar o site ou criar um novo cadastro.</p>
 </div>
 
 ## 📚 **Referências**

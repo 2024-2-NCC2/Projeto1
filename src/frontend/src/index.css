@@ -293,6 +293,38 @@ footer {
 }
 
 @media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .nav-link {
+    font-size: 1.2rem;
+    margin-right: 0;
+  }
+
+  .user-profile {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .navbar-collapse {
+    text-align: center;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+  }
+
+  .user-profile-icon {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 768px) {
   .footer-container {
     flex-direction: column;
     align-items: center;

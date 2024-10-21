@@ -285,31 +285,80 @@
 }
 
 @media (max-width: 768px) {
-  .content-section {
-      flex-direction: column;
-      align-items: center;
+  .reality-content-section, .mission-section {
+    flex-direction: column;
+    text-align: center;
+    margin: 20px 10px;
   }
 
-  .text-content {
-      margin-right: 0;
-      margin-bottom: 20px;
+  .reality-text-content, .mission-text-section {
+    margin: 0;
+    padding: 0;
   }
 
-  .image-content img {
-      max-width: 100%;
+  .reality-image-content, .mission-image-section {
+    margin-top: 20px;
   }
 
-  .stats-grid {
-      grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 768px) {
-  .mission-title, .cta-title {
+  .reality-text-title, .mission-title, .cta-title {
     font-size: 2rem;
   }
 
-  .mission-description, .cta-description {
+  .reality-text-description, .mission-description, .cta-description {
     font-size: 1.2rem;
+  }
+
+  .cta-button {
+    padding: 15px 30px;
+    font-size: 1.5rem;
+  }
+
+  .stats-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stats-wrapper {
+    padding: 0 10px;
+  }
+  
+  .stats-grid > div {
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .reality-content-section, .mission-section {
+    flex-direction: column;
+    text-align: center;
+    margin: 20px 15px;
+  }
+
+  .reality-text-title, .mission-title {
+    font-size: 2.5rem;
+  }
+
+  .reality-text-description, .mission-description {
+    font-size: 1.4rem;
+  }
+
+  .cta-title {
+    font-size: 3rem;
+  }
+
+  .cta-button {
+    padding: 18px 35px;
+    font-size: 1.8rem;
+  }
+
+  .stats-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .stats-grid > div {
+    margin: 15px 0;
   }
 }

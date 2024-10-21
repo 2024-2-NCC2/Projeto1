@@ -1,6 +1,7 @@
 import React from 'react';
-import carouselWelcome from '../public/assets/gifs/welcome-to-foodpath-carousel.gif';
-import carouselContact from '../public/assets/gifs/contact-us-foodpath-carousel.gif';
+import carouselWelcome from '../../public/assets/gifs/welcome-to-foodpath-carousel.gif';
+import carouselContact from '../../public/assets/gifs/contact-us-foodpath-carousel.gif';
+import './Carousel.css';
 
 const Carousel = () => {
   return (

@@ -8,7 +8,7 @@ import missionGif from '../../public/assets/gifs/mission-foodpath-gif.gif';
 
 import useCountUp from '../../components/hooks/useCountUp';
 
-import Carousel from '../../components/Carousel';
+import Carousel from '../../components/Carousel/Carousel';
 import StatItem from '../../components/StatItem';
 
 const Home = () => {

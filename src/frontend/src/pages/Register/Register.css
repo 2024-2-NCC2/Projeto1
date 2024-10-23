@@ -1,29 +1,28 @@
 .register-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   height: 100vh;
   background-color: #f4f4f9;
 }
 
 .register-left, .register-right {
-  width: 100%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 40px;
 }
 
 .register-left {
   background-color: #ff4473;
   color: white;
   text-align: center;
-  padding: 40px;
 }
 
 .register-logo {
   width: 100%;
-  max-width: 40rem;
+  max-width: 30rem;
   animation: float 3s ease-in-out infinite;
 }
 
@@ -43,7 +42,6 @@
 .register-right {
   background-color: #ffffff;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-  margin-top: 20px;
 }
 
 .register-title {
@@ -65,23 +63,32 @@
   margin-bottom: 20px;
   border-bottom: 2px solid #ccc;
   padding-bottom: 10px;
+  position: relative;
 }
 
 .register-input-icon {
-  margin-bottom: 5px;
+  margin-top: 8px;
   color: #ff4473;
-}
-
-.register-label {
-  font-size: 1rem;
-  font-weight: 500;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .register-input {
   border: none;
   width: 100%;
   padding: 10px;
+  padding-left: 30px;
   font-size: 1rem;
+}
+
+.register-eye-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
 }
 
 .register-input:focus {
@@ -147,52 +154,58 @@
   margin-bottom: 10px;
 }
 
-.register-eye-icon {
-  cursor: pointer;
-}
-
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .register-container {
-    flex-direction: row;
+    flex-direction: column;
+    height: auto;
   }
 
   .register-left, .register-right {
-    width: 50%;
-    padding: 40px;
+    width: 100%;
+    padding: 20px;
   }
 
-  .register-logo {
-    width: 30rem;
+  .register-left {
+    padding: 20px;
   }
 
-  .register-heading {
-    font-size: 3rem;
+  .register-right {
+    margin-top: 0;
+    padding: 20px;
   }
 
   .register-title {
-    font-size: 2.6rem;
-  }
-
-  .register-input-group {
-    flex-direction: row;
-    align-items: center;
-  }
-
-  .register-input-icon {
-    margin-right: 10px;
+    font-size: 1.8rem;
   }
 
   .register-label {
-    font-size: 1.2rem;
+    margin-left: 25px;
+  }
+
+  .register-form {
+    padding: 10px;
+  }
+
+  .register-input-group {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+
+  .register-input-icon {
+    margin-top: -5px;
+    margin-right: 0;
   }
 
   .register-input {
-    width: 80%;
-    font-size: 1.1rem;
+    width: 100%;
   }
 
-  .register-button {
-    padding: 15px;
-    font-size: 1.2rem;
+  .register-eye-icon {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
   }
 }

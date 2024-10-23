@@ -27,7 +27,7 @@ const Contact = () => {
 
       <div className="contact-options">
         <div ref={emailRef} className={`contact-option ${emailInView ? 'reveal' : ''}`}>
-          <FontAwesomeIcon icon={faEnvelope} size="6x" />
+          <FontAwesomeIcon icon={faEnvelope} size="6x" color='white'/>
           <h3>E-mail</h3>
           <p>Tem alguma dúvida?</p>
           <a href="mailto:foodpathcontact@gmail.com" className="underline">
@@ -36,7 +36,7 @@ const Contact = () => {
         </div>
 
         <div ref={instagramRef} className={`contact-option ${instagramInView ? 'reveal' : ''}`}>
-          <FontAwesomeIcon icon={faInstagram} size="6x" />
+          <FontAwesomeIcon icon={faInstagram} size="6x" color='white'/>
           <h3>Instagram</h3>
           <p>Fique por dentro de tudo!</p>
           <a href="https://instagram.com/foodpathoficial" target="_blank" rel="noopener noreferrer" className="underline">
@@ -45,7 +45,7 @@ const Contact = () => {
         </div>
 
         <div ref={xRef} className={`contact-option ${xInView ? 'reveal' : ''}`}>
-          <FontAwesomeIcon icon={faXTwitter} size="6x" />
+          <FontAwesomeIcon icon={faXTwitter} size="6x" color='white'/>
           <h3>X</h3>
           <p>Acompanhe nossas atualizações!</p>
           <a href="https://x.com/foodpathoficial" target="_blank" rel="noopener noreferrer" className="underline">

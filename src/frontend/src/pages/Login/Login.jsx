@@ -87,10 +87,6 @@ const Login = () => {
 
           {error && <p className="login-error">{error}</p>}
 
-          <p className="login-forgot-password">
-            <a href="/forgot-password">Esqueci minha senha</a>
-          </p>
-
           <button type="submit" className="login-button">Entrar</button>
         </form>
 

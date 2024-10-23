@@ -88,16 +88,6 @@
     border-bottom: 2px solid #ff4473;
   }
   
-  .login-forgot-password {
-    margin-top: 10px;
-    font-size: 1.2rem;
-  }
-  
-  .login-forgot-password a {
-    color: #ff4473;
-    text-decoration: none;
-  }
-  
   .login-button {
     width: 100%;
     padding: 15px;

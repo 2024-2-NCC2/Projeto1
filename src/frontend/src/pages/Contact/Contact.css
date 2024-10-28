@@ -41,6 +41,15 @@
   height: auto;
 }
 
+.icon-color {
+  color: black;
+  transition: color 0.3s ease;
+}
+
+body.dark-mode .icon-color {
+  color: white;
+}
+
 .contact-options {
   display: flex;
   justify-content: space-around;

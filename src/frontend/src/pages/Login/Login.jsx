@@ -29,12 +29,13 @@ const Login = () => {
           password,
         }),
       });
-
+  
       const data = await response.json();
       if (response.ok) {
         console.log('Login bem-sucedido', data);
         localStorage.setItem('token', data.token);
         navigate('/');
+        window.location.reload();
       } else {
         setError(data.error);
       }
@@ -42,7 +43,7 @@ const Login = () => {
       console.error('Erro ao fazer login', error);
       setError('Erro ao fazer login. Tente novamente.');
     }
-  };
+  };  
 
   return (
     <div className="login-container">

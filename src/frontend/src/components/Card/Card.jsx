@@ -14,6 +14,7 @@ const Card = ({ title, description, link, imageSrc, userId, ongId }) => {
     
     try {
       const ongName = title;
+      console.log({ userId, ongId, ongName });
       await axios.post('http://localhost:5000/redirect', {
         userId: userId,
         ongId: ongId,

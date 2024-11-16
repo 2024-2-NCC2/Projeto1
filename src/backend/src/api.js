@@ -1,15 +1,14 @@
-const { Router } = require('express');
-const serverless = require('serverless-http');
 const express = require('express');
 const mysql = require('mysql2');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const dotenv = require('dotenv');
 
+const { format } = require('date-fns');
+
 dotenv.config();
 
 const app = express();
-const router = Router();
 const cors = require('cors');
 
 app.use(cors());
@@ -62,7 +61,7 @@ db.query(`
   )
 `);
 
-router.post('/register', async (req, res) => {
+app.post('/register', async (req, res) => {
   const { name, email, password } = req.body;
 
   db.query('SELECT * FROM users WHERE email = ?', [email], (err, results) => {
@@ -85,7 +84,7 @@ router.post('/register', async (req, res) => {
   });
 });
 
-router.post('/login', (req, res) => {
+app.post('/login', (req, res) => {
   const { email, password } = req.body;
 
   db.query('SELECT * FROM users WHERE email = ?', [email], (err, results) => {
@@ -105,15 +104,21 @@ router.post('/login', (req, res) => {
   });
 });
 
-router.post('/redirect', (req, res) => {
+app.post('/redirect', (req, res) => {
   const { userId, ongId, ongName } = req.body;
-  const redirectDate = new Date().toISOString();
+  
+  if (!userId || !ongId || !ongName) {
+    return res.status(400).json({ error: 'Dados inválidos' });
+  }
+
+  const redirectDate = format(new Date(), 'yyyy-MM-dd HH:mm:ss');
 
   db.query(
     'INSERT INTO redirect (user_id, ong_id, ong_name, redirect_date) VALUES (?, ?, ?, ?)',
     [userId, ongId, ongName, redirectDate],
     (err, result) => {
       if (err) {
+        console.error('Erro ao executar a query:', err);
         return res.status(500).json({ error: 'Erro ao registrar o redirecionamento' });
       }
       res.status(201).json({ message: 'Redirecionamento registrado com sucesso!' });
@@ -121,7 +126,7 @@ router.post('/redirect', (req, res) => {
   );
 });
 
-router.get('/ongs', (req, res) => {
+app.get('/ongs', (req, res) => {
   db.query('SELECT * FROM ongs', (err, rows) => {
     if (err) {
       return res.status(500).json({ error: 'Erro ao buscar ONGs' });
@@ -130,7 +135,7 @@ router.get('/ongs', (req, res) => {
   });
 });
 
-router.get('/profile', (req, res) => {
+app.get('/profile', (req, res) => {
   const token = req.headers['authorization']?.split(' ')[1];
   if (!token) {
     return res.status(401).json({ error: 'Token não fornecido' });
@@ -152,11 +157,7 @@ router.get('/profile', (req, res) => {
   });
 });
 
-app.use('/.netlify/functions/api', router);
-
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Servidor rodando na porta ${PORT}`);
 });
-
-module.exports.handler = serverless(app);
